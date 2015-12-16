@@ -12,20 +12,20 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class CoolWeatherOpenHelper extends SQLiteOpenHelper{
 	//建表语句
-	private static final String create_province="create table province("
+	private static final String create_province="create table Province("
 			+"id integer primary key autoincrement,"
 			+"province_name text,"
 			+"province_code text)";
-	private static final String create_city="create table city("
+	private static final String create_city="create table City("
 			+"id integer primary key autoincrement,"
 			+"city_name text,"
 			+"city_code text,"
 			+"province_id integer)";
-	private static final String create_country="create table country("
+	private static final String create_country="create table Country("
 			+"id integer primary key autoincrement,"
-			+"city_name text,"
-			+"city_code text,"
-			+"city_id integer)";
+			+"country_name text,"
+			+"country_code text,"
+			+"city_id integet)";
 	
 	/**
 	 * 父类的构造方法，调用此方法创建数据库
@@ -50,7 +50,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper{
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL(create_province);//创建省份表
 		db.execSQL(create_city);//创建城市表
-		db.execSQL(create_country);//创建县城表
+		db.execSQL(create_country);
 	}
 	
 	/**
