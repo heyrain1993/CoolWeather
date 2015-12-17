@@ -22,9 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.coolweather.activity.WeatherActivity">
-            
-        </activity>
+        <activity android:name="com.coolweather.activity.WeatherActivity"></activity>
+        
+        <service android:name="com.coolweather.service.AutoUpdateService"></service>
+        
+        <receiver android:name="com.coolweather.service.AutoUpdateReceiver"></receiver>
     </application>
 
 </manifest>
