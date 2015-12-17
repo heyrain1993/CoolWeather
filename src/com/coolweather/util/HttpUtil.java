@@ -35,7 +35,7 @@ public class HttpUtil {
 						response.append(line);
 					}
 					if(listener!=null){
-						System.out.println("ÍøÂçÇëÇóÊı¾İ"+response.toString());
+						
 						listener.onFinish(response.toString());
 					}
 				}catch(Exception e){

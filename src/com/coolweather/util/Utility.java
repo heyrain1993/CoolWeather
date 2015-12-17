@@ -25,7 +25,7 @@ public class Utility {
 	 * @return
 	 */
 	public synchronized static boolean handleProvinceResponse(CoolWeatherDB coolWeatherDB,String response){
-		System.out.println(response);
+		
 		if(!TextUtils.isEmpty(response)){
 			String[] allProvince=response.split(",");
 			if(allProvince!=null&&allProvince.length>0){
@@ -50,7 +50,7 @@ public class Utility {
 	 * @return
 	 */
 	public synchronized static boolean handleCityResponse(CoolWeatherDB coolWeatherDB,String response,int provinceId){
-		System.out.println(response);
+		
 		if(!TextUtils.isEmpty(response)){
 			String[] allCity=response.split(",");
 			if(allCity!=null&&allCity.length>0){
@@ -69,7 +69,7 @@ public class Utility {
 	}
 	
 	public synchronized static boolean handleCountryResponse(CoolWeatherDB coolWeatherDB,String response,int cityId){
-		System.out.println(response);
+		
 		if(!TextUtils.isEmpty(response)){
 			String[] allCountry=response.split(",");
 			if(allCountry!=null&&allCountry.length>0){
@@ -111,7 +111,7 @@ public class Utility {
 		SharedPreferences.Editor editor=PreferenceManager.getDefaultSharedPreferences(context).edit();
 		editor.putBoolean("city_selected", true);
 		editor.putString("city_name", cityName);
-		editor.putString("weahter_code", weatherCode);
+		editor.putString("weather_code", weatherCode);
 		editor.putString("minTemp", minTemp);
 		editor.putString("maxTemp", maxTemp);
 		editor.putString("weather_desp",weatherDesp);
